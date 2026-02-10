@@ -7,12 +7,13 @@ export enum BookingStatus {
 
 export interface Booking {
   id: string;
+  orderId: string;
   userName: string;
-  mobile: string;
   email: string;
+  mobile: string;
+  status: "PAID" | "FAILED";
   amount: number;
-  status: BookingStatus;
-  gatewayRef: string;
+  cfPaymentId?: string;
   date: string;
 }
 
